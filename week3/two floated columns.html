@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Floated Columns</title>
+    <style>
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .left-column {
+            float: left;
+            width: 45%;
+            background-color: #f4f4f4;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+        .right-column {
+            float: right;
+            width: 45%;
+            background-color: #e8e8e8;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="clearfix">
+        <div class="left-column">
+            Left column content
+        </div>
+        <div class="right-column">
+            Right column content
+        </div>
+    </div>
+</body>
+</html>

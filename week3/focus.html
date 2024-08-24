@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>focus pseudo class</title>
+    <style>
+        .focus-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+.focus-input:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+    </style>
+</head>
+<body>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" class="focus-input">
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" class="focus-input">
+    </form>
+</body>
+</html>

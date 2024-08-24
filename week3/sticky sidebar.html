@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Sidebar</title>
+    <style>
+        .container {
+            display: flex;
+            margin: 0 auto;
+            width: 80%;
+        }
+        .sidebar {
+            width: 30%;
+            height: 100vh;
+            background-color: #f4f4f4;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+        }
+        .main-content {
+            width: 70%;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            Sticky Sidebar
+        </div>
+        <div class="main-content">
+            <p>Long content goes here...</p>
+            <p style="height: 1500px;">More content...</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.quiz-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+.quiz-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    height: 10px;
+    background: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    width: 0;
+    background: #4caf50;
+    transition: width 0.5s ease-in-out;
+}
+
+.quiz-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.question h2 {
+    font-size: 1.2em;
+}
+
+.options label {
+    display: block;
+    background: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.options label:hover {
+    background-color: #e0e0e0;
+}
+
+.options input[type="radio"] {
+    display: none;
+}
+
+.options input[type="radio"]:checked + label {
+    background-color: #4caf50;
+    color: white;
+}
+
+.submit-btn {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+.feedback {
+    margin-top: 20px;
+    font-size: 1.1em;
+    display: none;
+}
+
+.feedback.correct {
+    color: #4caf50;
+}
+
+.feedback.incorrect {
+    color: #f44336;
+}
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <div class="quiz-header">
+            <h1>Interactive Quiz</h1>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+        </div>
+        <div class="quiz-content">
+            <div class="question">
+                <h2>What is the capital of France?</h2>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="q1" value="Paris"> Paris
+                    </label>
+                    <label>
+                        <input type="radio" name="q1" value="London"> London
+                    </label>
+                    <label>
+                        <input type="radio" name="q1" value="Berlin"> Berlin
+                    </label>
+                    <label>
+                        <input type="radio" name="q1" value="Madrid"> Madrid
+                    </label>
+                </div>
+            </div>
+            <button class="submit-btn">Submit</button>
+            <div class="feedback"></div>
+        </div>
+    </div>
+
+    <script src="script.js">
+     document.querySelector('.submit-btn').addEventListener('click', function () {
+    const selectedOption = document.querySelector('input[name="q1"]:checked');
+    const feedback = document.querySelector('.feedback');
+    const progressBar = document.querySelector('.progress');
+
+    if (selectedOption) {
+        if (selectedOption.value === 'Paris') {
+            feedback.textContent = 'Correct! Paris is the capital of France.';
+            feedback.classList.add('correct');
+            progressBar.style.width = '100%';
+        } else {
+            feedback.textContent = 'Incorrect. The correct answer is Paris.';
+            feedback.classList.add('incorrect');
+            progressBar.style.width = '50%';
+        }
+        feedback.style.display = 'block';
+    } else {
+        alert('Please select an answer!');
+    }
+});   
+    </script>
+</body>
+</html>

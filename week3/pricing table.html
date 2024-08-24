@@ -1,0 +1,129 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Table</title>
+    <style>
+      /* General body styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+/* Container for the pricing table */
+.pricing-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Individual pricing card styling */
+.pricing-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Heading styling */
+.pricing-card h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Price styling */
+.price {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Feature list styling */
+.features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.features li {
+    margin-bottom: 10px;
+}
+
+/* Button styling */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .pricing-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .pricing-card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="pricing-container">
+        <div class="pricing-card">
+            <h2>Basic</h2>
+            <p class="price">$9.99/mo</p>
+            <ul class="features">
+                <li>10GB Storage</li>
+                <li>100 Emails</li>
+                <li>24/7 Support</li>
+            </ul>
+            <a href="#" class="btn">Sign Up</a>
+        </div>
+
+        <div class="pricing-card">
+            <h2>Standard</h2>
+            <p class="price">$19.99/mo</p>
+            <ul class="features">
+                <li>50GB Storage</li>
+                <li>500 Emails</li>
+                <li>Priority Support</li>
+            </ul>
+            <a href="#" class="btn">Sign Up</a>
+        </div>
+
+        <div class="pricing-card">
+            <h2>Premium</h2>
+            <p class="price">$29.99/mo</p>
+            <ul class="features">
+                <li>Unlimited Storage</li>
+                <li>Unlimited Emails</li>
+                <li>Premium Support</li>
+            </ul>
+            <a href="#" class="btn">Sign Up</a>
+        </div>
+    </div>
+</body>
+</html>
+ 
